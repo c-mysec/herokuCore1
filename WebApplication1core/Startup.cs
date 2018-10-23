@@ -52,7 +52,7 @@ namespace WebApplication1core
             var pgHost = pgHostPort.Split(":")[0];
             var pgPort = pgHostPort.Split(":")[1];
 
-            string connStr = $"Server={pgHost};Port={pgPort};User Id={pgUser};Password={pgPass};Database={pgDb};sslmode=Prefer;Trust Server Certificate=true";
+            string connStr = $"Server={pgHost};Port={pgPort};User Id={pgUser};Password={pgPass};Database={pgDb}";
             services.AddDbContext<WebApplication1coreContext>(options =>
                     options.UseNpgsql(connStr));
         }

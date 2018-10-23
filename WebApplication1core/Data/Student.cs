@@ -8,6 +8,7 @@ namespace WebApplication1core.Data
 {
     public class Student
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
@@ -22,6 +23,7 @@ namespace WebApplication1core.Data
 
     public class Enrollment
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int EnrollmentID { get; set; }
         public int CourseID { get; set; }
         public int StudentID { get; set; }
